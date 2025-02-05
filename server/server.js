@@ -1,9 +1,8 @@
-const { log } = require("console");
 const mongoose = require("mongoose");
-const dotenv = requir("dotenv");
+const dotenv = require("dotenv");
 
-dotenv.config({ path: "./coonfig.env" });
-const app = reqire("./app");
+dotenv.config({ path: "./config.env" });
+const app = require("./app");
 
 const db = process.env.DB_URI;
 
