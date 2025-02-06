@@ -4,11 +4,11 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
 const app = require("./app");
 
-const db = process.env.DB_URI;
+const database = process.env.DB_URI;
 
 //DB connection
 mongoose
-  .connect(db)
+  .connect(database)
   .then(() => {
     console.log("DB connected");
   })
