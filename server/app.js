@@ -3,6 +3,8 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const globalErrorHandler=require("./controller/errorController.js")
 const userRouter=require("./route/userRouter.js")
+const AppError=require("./utils/appError")
+
 const app = express();
 
 app.use(cookieParser());

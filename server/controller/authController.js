@@ -5,6 +5,7 @@ const catchAsync = require("../utils/catchAsync.js");
 const sendEmail = require("../utils/email.js");
 const generateOtp = require("../utils/generateOtp.js");
 const jwt = require("jsonwebtoken");
+const AppError=require("./utils/appError")
 
 const signToken = (id) => {
   return JsonWebTokenError.sign({ id }, process.env.JWT_SECRET, {
@@ -49,7 +50,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 
   const otp = generateOtp();
 
-  const otpExpires = Date.now() * 24 * 60 * 60 * 1000;
+  const otpExpires = Date.now() + 24 * 60 * 60 * 1000;
 
   const newUser = await User.create({
     username,
