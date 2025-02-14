@@ -1,9 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
+<<<<<<< HEAD
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
+=======
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+>>>>>>> 0d33f49 (backend)
   },
   "author": "perpill",
   "license": "ISC",
@@ -17,8 +25,12 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.7",
     "nodemailer": "^6.10.0",
+<<<<<<< HEAD
     "validator": "^13.12.0",
     "appError": "^1.0.0"
+=======
+    "validator": "^13.12.0"
+>>>>>>> 0d33f49 (backend)
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
